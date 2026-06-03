@@ -4,7 +4,7 @@
 
 ## 🌐 Site em Produção
 
-**[https://github.com/xariote/ds881-curriculo-grr20240574]
+**[https://xariote.github.io/ds881-curriculo-grr20240574/]
 ---
 
 ## 🗂️ Estrutura do Projeto
