@@ -27,7 +27,11 @@ jobs:
   # JOB 1: Lint / Static Analysis
   # ──────────────────────────────────────────────
   lint:
+<<<<<<< HEAD
     name: Lint e analise
+=======
+    name: Lint & Static Analysis
+>>>>>>> a13c5305c0f4fd6e7acf4ff3d6df02d5a8fb98c8
     runs-on: ubuntu-latest
 
     steps:
@@ -106,12 +110,17 @@ jobs:
       - name: Validar HTML com tidy
         run: |
           sudo apt-get install -y tidy 2>/dev/null || true
+<<<<<<< HEAD
           tidy -errors -quiet -utf8 src/index.html && echo "HTML válido" || echo "⚠️  Avisos de HTML (não bloqueante)"
+=======
+          tidy -errors -quiet -utf8 src/index.html && echo "HTML válido" || echo "Avisos de HTML (não bloqueante)"
+>>>>>>> a13c5305c0f4fd6e7acf4ff3d6df02d5a8fb98c8
 
       - name: Build Docker image
         run: |
           echo "Construindo imagem Docker..."
           docker build -t portfolio-dev:ci .
+<<<<<<< HEAD
           echo "  Imagem Docker construída com sucesso"
 
       - name: Teste smoke do container
@@ -133,6 +142,31 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
+=======
+          echo "Imagem Docker construída com sucesso"
+
+      - name: Teste smoke do container
+        run: |
+          echo "Iniciando container para smoke test"
+          docker run -d --name portfolio-test -p 8080:8080 portfolio-dev:ci
+          
+          # Aguarda até 30s com retry em vez de sleep fixo
+          echo "Aguardando servidor subir..."
+          for i in $(seq 1 10); do
+            sleep 3
+            if curl -s -o /dev/null -w "%{http_code}" http://localhost:8080 | grep -qE "^(200|304)"; then
+              echo "Site respondendo em localhost:8080 (tentativa $i)"
+              docker stop portfolio-test && docker rm portfolio-test
+              exit 0
+            fi
+            echo "   tentativa $i/10 — aguardando..."
+          done
+          
+          echo "Site não respondeu após 30s. Logs do container:"
+          docker logs portfolio-test
+          docker stop portfolio-test && docker rm portfolio-test
+          exit 1
+>>>>>>> a13c5305c0f4fd6e7acf4ff3d6df02d5a8fb98c8
 
   # ──────────────────────────────────────────────
   # JOB 3: Deploy (apenas na main)
