@@ -27,7 +27,7 @@ jobs:
   # JOB 1: Lint / Static Analysis
   # ──────────────────────────────────────────────
   lint:
-    name: Lint & Static Analysis
+    name: Lint e analise
     runs-on: ubuntu-latest
 
     steps:
