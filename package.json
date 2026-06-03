@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.0",
+    "@tailwindcss/vite": "^4.3.0"
+  },
+  "name": "ds881-curriculo-grr20240574",
+  "version": "1.0.0",
+  "description": "Este repositório é um **template** para a atividade prática individual da disciplina DS881. O objetivo é aplicar conceitos de conteinerização, automação de pipeline CI/CD e governança de código em um cenário de projeto real (seu currículo ou portfólio profissional).",
+  "main": "index.js",
+  "devDependencies": {
+    "tailwindcss": "^4.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xariote/ds881-curriculo-grr20240574.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/xariote/ds881-curriculo-grr20240574/issues"
+  },
+  "homepage": "https://github.com/xariote/ds881-curriculo-grr20240574#readme"
+}
