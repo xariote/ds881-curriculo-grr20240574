@@ -8,6 +8,9 @@ RUN npm install -g live-server@1.2.2
 
 WORKDIR /app
 
+#copia o codigo pra dentro da img
+COPY src/ ./src/
+
 EXPOSE 8080
 
 #Comando padrão: inicia live-server apontando para /app/src
