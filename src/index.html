@@ -1,27 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roberto Rigo - Currículo</title>
     <link rel="stylesheet" href="output.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
-<body class="flex flex-col w-screen h-screen">
-    <div>
-        <h1>
-            Roberto Rigo - currículo
-        </h1>
-        <p>Email: robertorigo18@gmail.com</p>
-    </div>
+<body class="bg-zinc-950 text-zinc-100 min-h-screen selection:bg-red-600 selection:text-white">
+    <!-- Barra Lateral de Accent (Vermelho) -->
+    <div class="fixed left-0 top-0 h-full w-2 bg-red-600 z-50"></div>
 
-    <div>
-        <h2>Cursos e Formação</h2>
-        <p>UFPR: Tecnólogo em ánalise e Desenvolvimento de Sistemas</p>
-        <p>Dois artigos sobre PLN em lingua portuguesa e bancos vetoriais</p>
-        <a href="https://orcid.org/0009-0007-4634-8298">Orcid</a>
-    </div>
-    
-    <div>
-        <h2>Experiência</h2>
-        <p>Desenvolvimento Web com Angular e Vue</p>
-        <p>Backend com Java Spring Boot</p>
-    </div>
-    
-    
+    <main class="max-w-4xl mx-auto px-6 py-12 md:py-24">
+        <!-- Header Section -->
+        <header class="relative mb-16 group">
+            <div class="absolute -left-12 top-0 text-red-600 opacity-20 text-8xl font-black select-none group-hover:opacity-40 transition-opacity duration-500">
+                RR
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-4">
+                Roberto <span class="text-red-600">Rigo</span>
+            </h1>
+            <div class="flex flex-col md:flex-row md:items-center gap-4 text-zinc-400">
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 bg-red-600 rounded-full animate-pulse"></span>
+                    <p class="font-medium tracking-wide">Desenvolvedor Full Stack</p>
+                </div>
+                <span class="hidden md:block text-zinc-700">|</span>
+                <a href="mailto:robertorigo18@gmail.com" class="hover:text-white transition-colors duration-300 flex items-center gap-2">
+                    robertorigo18@gmail.com
+                </a>
+            </div>
+        </header>
 
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+            <!-- Coluna Esquerda: Experiência -->
+            <div class="md:col-span-7 space-y-12">
+                <section>
+                    <div class="flex items-center gap-4 mb-8">
+                        <h2 class="text-2xl font-bold uppercase tracking-widest text-white">Experiência</h2>
+                        <div class="h-px flex-1 bg-zinc-800"></div>
+                    </div>
+                    
+                    <div class="space-y-8">
+                        <div class="relative pl-8 border-l border-zinc-800 group">
+                            <div class="absolute -left-[5px] top-2 w-2 h-2 bg-zinc-800 group-hover:bg-red-600 transition-colors duration-300"></div>
+                            <h3 class="text-xl font-bold text-red-500 mb-1">Frontend Specialist</h3>
+                            <p class="text-zinc-400 mb-2">Desenvolvimento Web com <span class="text-zinc-200 font-semibold">Angular</span> e <span class="text-zinc-200 font-semibold">Vue</span></p>
+                            <p class="text-sm text-zinc-500">Foco em interfaces performáticas e experiência do usuário.</p>
+                        </div>
+
+                        <div class="relative pl-8 border-l border-zinc-800 group">
+                            <div class="absolute -left-[5px] top-2 w-2 h-2 bg-zinc-800 group-hover:bg-red-600 transition-colors duration-300"></div>
+                            <h3 class="text-xl font-bold text-red-500 mb-1">Backend Engineer</h3>
+                            <p class="text-zinc-400 mb-2">Sistemas robustos com <span class="text-zinc-200 font-semibold">Java Spring Boot</span></p>
+                            <p class="text-sm text-zinc-500">Arquitetura de microserviços e APIs escaláveis.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Coluna Direita: Educação e Links -->
+            <div class="md:col-span-5 space-y-12">
+                <section>
+                    <div class="flex items-center gap-4 mb-8">
+                        <h2 class="text-2xl font-bold uppercase tracking-widest text-white">Formação</h2>
+                        <div class="h-px flex-1 bg-zinc-800"></div>
+                    </div>
+                    
+                    <div class="bg-zinc-900/50 p-6 border border-zinc-800 hover:border-red-600/50 transition-colors duration-500">
+                        <p class="text-red-500 font-bold mb-1">UFPR</p>
+                        <p class="text-zinc-200 font-medium leading-tight">Tecnólogo em Análise e Desenvolvimento de Sistemas</p>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="flex items-center gap-4 mb-8">
+                        <h2 class="text-2xl font-bold uppercase tracking-widest text-white">Pesquisa</h2>
+                        <div class="h-px flex-1 bg-zinc-800"></div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <p class="text-zinc-400 italic leading-relaxed">
+                            "Dois artigos sobre <span class="text-white not-italic font-semibold">PLN em língua portuguesa</span> e <span class="text-white not-italic font-semibold">bancos vetoriais</span>."
+                        </p>
+                        <a href="https://orcid.org/0009-0007-4634-8298" target="_blank" class="inline-flex items-center gap-2 bg-white text-black px-4 py-2 font-bold uppercase text-xs tracking-widest hover:bg-red-600 hover:text-white transition-all duration-300">
+                            Ver no Orcid
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Footer Decorativo -->
+        <footer class="mt-24 pt-8 border-t border-zinc-900 flex justify-between items-center text-[10px] uppercase tracking-[0.3em] text-zinc-600">
+            <span>© 2026 Roberto Rigo</span>
+            <span class="text-red-900">Built with Tailwind v4.3.0</span>
+        </footer>
+    </main>
 </body>
+</html>
