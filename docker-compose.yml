@@ -1,0 +1,17 @@
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    #mapeia porta 8080 do host → 8080 do container
+    ports:
+      - "8080:8080"
+    #bind mount: qualquer alteração em ./src reflete IMEDIATAMENTE
+    #dentro do container, ativando o hot reload do live-server
+    volumes:
+      - ./src:/app/src
+    # Reinicia automaticamente em caso de falha
+    restart: unless-stopped
+    # Variáveis de ambiente (útil para customizar o live-server)
+    environment:
+      - NODE_ENV=development

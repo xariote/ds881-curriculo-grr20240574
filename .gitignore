@@ -1,0 +1,24 @@
+#Node
+node_modules/
+npm-debug.log*
+
+#Build outputs
+dist/
+.cache/
+
+#OS
+.DS_Store
+Thumbs.db
+
+#IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+#Docker
+*.log
+
+#Lint configs temporários
+.htmlhintrc
+.stylelintrc.json
